@@ -1,5 +1,7 @@
 import { Container } from './styles';
 
+import { useState } from 'react';
+
 import { Button } from '../Button';
 
 import priceUp from '../../assets/chart-1.svg'
@@ -8,6 +10,8 @@ import priceDown from '../../assets/chart-2.svg'
 import { AiOutlineStar } from 'react-icons/ai'
 
 export function TabContent({ cryptoCoins }) {
+  const [indexItem, setIndexItem] = useState(1);
+  
   return (
     <Container>
       <thead>
@@ -28,7 +32,7 @@ export function TabContent({ cryptoCoins }) {
           cryptoCoins.map((item, index) => (
             <tr key={String(item.id)} className="table-row-data">
               <td className="table-data icon"><AiOutlineStar /></td>
-              <td className="table-data">{index + 1}</td>
+              <td className="table-data">{item.market_cap_rank}</td>
               <td className="table-data">
                 <div className="name-wrapper">
                   <img src={item.image} alt="" />
@@ -44,7 +48,7 @@ export function TabContent({ cryptoCoins }) {
               <td className="table-data">
                 <Button title="Trade" />
               </td>
-            </tr>            
+            </tr>
           )
         )
       }       

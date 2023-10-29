@@ -49,7 +49,7 @@ export function Pagination({totalPosts, postsPerPage, setCurrentPage, currentPag
     <Container>
       {
         currentPage > 1 &&
-          <Button title="Previous" onClick={() => handlePrev()}/>
+        <Button title="Previous" onClick={() => handlePrev()}/>
       }
       {currentPage > 1 && pageDecrementBtn}
       {
