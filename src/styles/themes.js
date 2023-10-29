@@ -1,0 +1,19 @@
+export const themes = {
+  COLORS: {
+    WHITE: '#FFFFFF',
+
+    LIGHT_800: '#787D91',
+    PARAGRAPH_COLOR: '#B1B5C3',
+    LINKS_COLOR: '#D9D9D9',
+    
+    // #BACKGROUND
+    FIRST_BACKGROUND: '#17181C',
+    SECOND_BACKGROUND: '#131315',
+
+    // HOVER
+    BACKGROUND_HOVER: '#3874FF',
+    BORDER_LI: '#4A4A4A',
+
+    ICONS: '#3874FF',
+  }
+};
