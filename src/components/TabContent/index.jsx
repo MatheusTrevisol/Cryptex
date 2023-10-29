@@ -36,12 +36,12 @@ export function TabContent({ cryptoCoins }) {
               <td className="table-data">
                 <div className="name-wrapper">
                   <img src={item.image} alt="" />
-                  <h4>{item.name}<span>{item.symbol}</span></h4>
+                  <h4>{item.name}<span>{item.symbol.toUpperCase()}</span></h4>
                 </div>
               </td>
-              <td className="table-data">{item.current_price}</td>
-              <td className="table-data">{item.price_change_percentage_24h}</td>
-              <td className="table-data">{item.market_cap}</td>
+              <td className="table-data">$ {item.current_price.toLocaleString()}</td>
+              <td className="table-data">{item.price_change_percentage_24h.toFixed(2)}%</td>
+              <td className="table-data">$ {item.market_cap.toLocaleString()}</td>
               <td className="table-data">
                 <img src={item.price_change_percentage_24h > 0 ? priceUp : priceDown} alt="" />
               </td>
