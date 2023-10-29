@@ -20,16 +20,16 @@ export function TabContent({ cryptoCoins }) {
           <th className="table-heading">#</th>
           <th className="table-heading">Name</th>
           <th className="table-heading">Current Price</th>
-          <th className="table-heading">24h %</th>
+          <th className="table-heading">ATL</th>
           <th className="table-heading">Market Cap</th>
-          <th className="table-heading">Last 7 days</th>
+          <th className="table-heading">Last 24h</th>
           <th className="table-heading"></th>
         </tr>
       </thead>
       <tbody>
         {
           cryptoCoins &&
-          cryptoCoins.map((item, index) => (
+          cryptoCoins.map((item) => (
             <tr key={String(item.id)} className="table-row-data">
               <td className="table-data icon"><AiOutlineStar /></td>
               <td className="table-data">{item.market_cap_rank}</td>
@@ -40,7 +40,7 @@ export function TabContent({ cryptoCoins }) {
                 </div>
               </td>
               <td className="table-data">$ {item.current_price.toLocaleString()}</td>
-              <td className="table-data">{item.price_change_percentage_24h.toFixed(2)}%</td>
+              <td className="table-data">$ {item.atl.toFixed(2)}</td>
               <td className="table-data">$ {item.market_cap.toLocaleString()}</td>
               <td className="table-data">
                 <img src={item.price_change_percentage_24h > 0 ? priceUp : priceDown} alt="" />
