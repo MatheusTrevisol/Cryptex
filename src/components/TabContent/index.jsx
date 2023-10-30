@@ -9,9 +9,7 @@ import priceDown from '../../assets/chart-2.svg'
 
 import { AiOutlineStar } from 'react-icons/ai'
 
-export function TabContent({ cryptoCoins }) {
-  const [indexItem, setIndexItem] = useState(1);
-  
+export function TabContent({ cryptoCoins }) {  
   return (
     <Container>
       <thead>
@@ -39,9 +37,9 @@ export function TabContent({ cryptoCoins }) {
                   <h4>{item.name}<span>{item.symbol.toUpperCase()}</span></h4>
                 </div>
               </td>
-              <td className="table-data">$ {item.current_price.toLocaleString()}</td>
-              <td className="table-data">$ {item.atl.toFixed(2)}</td>
-              <td className="table-data">$ {item.market_cap.toLocaleString()}</td>
+              <td className="table-data">U$ {item.current_price.toLocaleString()}</td>
+              <td className="table-data">U$ {item.atl.toFixed(2)}</td>
+              <td className="table-data">U$ {item.market_cap.toLocaleString()}</td>
               <td className="table-data">
                 <img src={item.price_change_percentage_24h > 0 ? priceUp : priceDown} alt="" />
               </td>

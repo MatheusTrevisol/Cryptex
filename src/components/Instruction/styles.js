@@ -29,7 +29,8 @@ export const Content = styled.div`
   }
 
   @media (min-width: 1330px) {
-    max-width: 130rem;
+    min-width: 140rem;
+    max-width: 140rem;
   }
   
   h2 {
@@ -60,6 +61,7 @@ export const Content = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
+
   }
 `;
 
@@ -75,7 +77,7 @@ export const Card = styled.div`
 
   color: ${({ theme }) => theme.COLORS.PARAGRAPH_COLOR};
 
-  @media (min-width: 660px) {
+  @media (min-width: 677px) {
     &.instruction-card::after {
       content: "";
       width: 160px;
